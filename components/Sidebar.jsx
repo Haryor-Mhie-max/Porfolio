@@ -16,19 +16,19 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import HamburgerIcon from './HamburgerIcon'
 import Logo from './Logo'
-
+import NavStyles from './navbar.module.css'
 
 export default function SimpleSidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-  <Flex w="full" h={16} px={4} alignItems="center" display={{ base: 'flex', md: 'none'}} shadow="md">
+    <div className={NavStyles.mobileNav}>
+    <Flex pos={'relative'} w="full" h={16} px={4} alignItems="center" display={{ base: 'flex', md: 'none'}} shadow="md">
       <Logo />
       <Spacer />
       <Button mx={2} onClick={toggleColorMode}>{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
-      
       <HamburgerIcon onClick={onOpen} boxSize={8} color={useColorModeValue('#8092BF', '#90A0C7')}/>
       <Drawer autoFocus={false} isOpen={isOpen} placement="right" onClose={onClose} returnFocusOnClose={false} onOverlayClick={onClose} size={"xs"}>
     <DrawerContent >
@@ -64,6 +64,7 @@ export default function SimpleSidebar() {
     </DrawerContent>
   </Drawer>
   </Flex>
+  </div>
   );
 }
 
