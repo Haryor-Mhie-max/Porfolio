@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
           <meta name="language" content="English" />
           <meta name="revisit-after" content="1 days" />
           <meta name="author" content="Bello Ololade" />
+          <link rel="shortcut icon" href="/hero.png" />
         </Head>
         <body style={{position: "relative"}}>
           <Main />
