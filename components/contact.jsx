@@ -91,7 +91,7 @@ export default function contact() {
                             pointerEvents="none"
                             children={<BsPerson color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input name="name" type="text" size="md" />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
@@ -101,7 +101,7 @@ export default function contact() {
                             pointerEvents="none"
                             children={<MdOutlineEmail color="gray.800" />}
                           />
-                          <Input type="email" size="md" />
+                          <Input name="email" type="email" size="md" />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
