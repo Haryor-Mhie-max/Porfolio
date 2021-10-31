@@ -42,7 +42,7 @@ const about = () => {
                 bg="#8092BF"
                 boxShadow={'md'}
                 overflow={'hidden'}>
-                <Image height='200px' width='200px' objectFit src={'/hero.png'} alt="Bello Ololade, Freelance Web desinger" />
+                <Image alt='Bello ololade' height='200px' width='200px' objectFit src={'/hero.png'} alt="Bello Ololade, Freelance Web desinger" />
               </Box>
             </Flex>
         <Stack px={4} order={{base:2, md: 1}} flex={1} spacing={{ base: 8, md: 12 }} position={'relative'}>
@@ -55,7 +55,7 @@ const about = () => {
           I believe your website should be your no1 sales agent and its works 24/7, Get a quote now that’s best for your business.
           </Text>
           <a rel='nofollow' href="#contact">
-          <Button fontSize={24} color="#8092BF" variant={'link'} colorScheme={'purple'} size={'2xl'}>
+          <Button type="button" fontSize={24} color="#8092BF" variant={'link'} colorScheme={'purple'} size={'2xl'}>
               Let's talk
             </Button>
             </a>

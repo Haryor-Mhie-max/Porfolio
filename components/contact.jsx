@@ -41,7 +41,7 @@ export default function contact() {
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box pos={'relative'}>
-                  <Image width="400px" height="400px" src='/contact.png'/>
+                  <Image alt='contact Bello ololade' width="400px" height="400px" src='/contact.png'/>
                   {/* <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3}  alignItems="left">
                     <Link href="+2348182716135"> 
@@ -116,6 +116,7 @@ export default function contact() {
                       </FormControl>
                       <FormControl id="name" float="right">
                         <Button
+                          type='button'
                           variant="solid"
                           bg="#90A0C7"
                           colorScheme={'purple'}

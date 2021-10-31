@@ -28,6 +28,7 @@ import {
             pos={'relative'}
             height={'230px'}>
             <Image
+              alt={title}
               rounded={'lg'}
               height={230}
               width={282}
@@ -45,7 +46,7 @@ import {
             <Text  color={'gray.500'} fontSize={'xs'}>
                 {desc}            
             </Text>
-            <Link href="/">
+            <Link rel="nofollow" href="/">
               <Text _hover={{ color: "#50679F" }}
                 _active={{
                     textDecoration: "underline",

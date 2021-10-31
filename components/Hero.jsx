@@ -50,6 +50,7 @@ export default function Hero() {
             >
             <Link rel='nofollow' href="#contact">
                 <Button
+                type="button"
                 colorScheme={'purple'}
                 bg={'#8092BF'}
                 rounded={'full'}
