@@ -25,6 +25,7 @@ import {
 } from 'react-icons/md';
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 import Header from './SectionHeader'
+import Image from 'next/image'
 
 export default function contact() {
   return (
@@ -39,9 +40,9 @@ export default function contact() {
           <Box>
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
-                <Box>
-                  
-                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                <Box pos={'relative'}>
+                  <Image width="400px" height="400px" src='/contact.svg'/>
+                  {/* <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3}  alignItems="left">
                     <Link href="+2348182716135"> 
                       <Button
@@ -76,7 +77,7 @@ export default function contact() {
                       </Button>
                       </Link>
                     </VStack>
-                  </Box>
+                  </Box> */}
                 </Box>
               </WrapItem>
               <WrapItem>

@@ -23,8 +23,7 @@ export default function SimpleSidebar() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <div className={NavStyles.mobileNav}>
-    <Flex pos={'relative'} w="full" h={16} px={4} alignItems="center" display={{ base: 'flex', md: 'none'}} shadow="md">
+    <Flex className={NavStyles.mobileNav} w="full" h={16} px={4} alignItems="center" display={{ base: 'flex', md: 'none'}} bg={useColorModeValue('gray.50', 'gray.900')}  shadow="md" zIndex={300}>
       <Logo />
       <Spacer />
       <Button mx={2} onClick={toggleColorMode}>{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
@@ -64,7 +63,6 @@ export default function SimpleSidebar() {
     </DrawerContent>
   </Drawer>
   </Flex>
-  </div>
   );
 }
 

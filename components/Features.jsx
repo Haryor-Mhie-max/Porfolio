@@ -17,7 +17,7 @@ import Header from './SectionHeader'
 
 const Features = () => {
   return(
-    <Container  px={{ base: 8, md: 48}} py={4} maxW={'7xl'} >
+    <Container centerContent px={{ base: 8, md: 48}} py={4} maxW={'7xl'} >
       <Header>Features</Header>
         <Text pb={[8, 4]} textAlign={'center'} color={'#8092BF'}
         fontWeight={600} lineHeight={1.1} fontSize={{ base: 'md', sm: 'lg', lg: '3xl' }}>What you get: <Text as={'span'} color={useColorModeValue('gray.600', 'gray.300')} fontWeight={400}> A website with the following features

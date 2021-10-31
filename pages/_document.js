@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
           <meta name="revisit-after" content="1 days" />
           <meta name="author" content="Bello Ololade" />
         </Head>
-        <body>
+        <body style={{position: "relative"}}>
           <Main />
           <NextScript />
         </body>

@@ -19,8 +19,7 @@ export default function Navbar({
   children }) {
       const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <div className={NavStyles.mobileNav}>
-    <Flex overflow={"hidden"} H={24} bg={useColorModeValue('gray.50', 'gray.900')} w="full" py={6} px={12} alignItems="center" display={{ base: 'none', md: 'flex' }} shadow="lg">
+    <Flex zIndex={200}  className={NavStyles.mobileNav} overflow={"hidden"} H={24} bg={useColorModeValue('gray.50', 'gray.900')} w="full" py={6} px={12} alignItems="center" display={{ base: 'none', md: 'flex' }} shadow="lg">
         <Logo />
       <Spacer />
        <Flex alignItems="center"> 
@@ -36,7 +35,6 @@ export default function Navbar({
       
       </Flex>
     </Flex>
-    </div>
   );
 }
 

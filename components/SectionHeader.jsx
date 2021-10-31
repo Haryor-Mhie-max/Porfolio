@@ -8,9 +8,20 @@ import {
 
 const Header = ({children, ...rest}) => {
   return(
-    <Heading color={useColorModeValue('gray.600', 'gray.200')}>
+    <Heading pos="relative" color={useColorModeValue('gray.600', 'gray.200')}>
       <Center textAlign={'center'} px={{ base: 2, md: 24 }} py={4} {...rest}>
-      <Text color="#8092BF">_</Text>{children}<Text color="#8092BF">_</Text>
+       <Center _after={{
+            transition: 'all .3s ease',
+            content: '""',
+            w: 16,
+            h: 2,
+            pos: 'absolute',
+            left: [5, 10, 16, 24],
+            bottom: 5,
+            bg: "#8092BF",
+            opacity: .5,
+            zIndex: 0,
+          }}>{children}</Center>
       </Center>
     </Heading>
   )

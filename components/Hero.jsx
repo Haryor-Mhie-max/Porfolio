@@ -1,82 +1,91 @@
+import Head from 'next/head';
 import {
-  Container,
-  Stack,
-  Flex,
   Box,
   Heading,
+  Container,
   Text,
   Button,
-  Link,
-  createIcon,
+  Stack,
+  Icon,
   useColorModeValue,
+  createIcon,
 } from '@chakra-ui/react';
-import {FiArrowRight} from "react-icons/fi"
-import Image from 'next/image'
+import Link from 'next/link'
 
-export default function CallToActionWithVideo() {
+export default function Hero() {
   return (
-    <Container maxW={'7xl'}>
-      <Stack
-        align={'center'}
-        spacing={{ base: 4, md: 10 }}
-        py={{ base: 8, md: 24 }}
-        textAlign={{base:'center', md: "left" }}
-        px={{ base: 4, md: 24 }}
-        direction={{ base: 'column', md: 'row' }} position={'relative'}>
-        <Stack order={{base:2, md: 1}} flex={1} spacing={{ base: 8, md: 12 }} position={'relative'}>
+    <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+      <Container position={'relative'} maxW={'3xl'}>
+        <Stack
+          as={Box}
+          textAlign={'center'}
+          spacing={{ base: 8, md: 14 }}
+          py={{ base: 16, md: 24 }}>
           <Heading
-            lineHeight={1.1}
             fontWeight={700}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '5xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}>Hey, I'm </Text>
-            <Text as={'span'} color={'#8092BF'}>
-                Ololade 👋
+            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            lineHeight={'110%'}>
+            Hi, there 👋 <br />
+            <Text as={'span'} color="#8092BF">
+             iam Ololade
             </Text>
           </Heading>
-          <Text color={useColorModeValue('gray.600', 'gray.300')}>
-            I'm a freelancing Web Designer, Based in Nigeria. <br/> I make websites that attract more users!
+          <Text color={'gray.500'}>
+          I'm a freelancing Web Designer, Based in Nigeria. 
+          <br/> I make websites that attract more users!
           </Text>
-          <a rel='nofollow' href="#contact">
-              <Button w={{ base: "full", md: 48}}
-              rounded={'md'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={4}
-              rightIcon={<FiArrowRight h={4} w={4} color={'gray.100'} />} 
-              colorScheme={'purple'}
-              bg={'#8092BF'}
-              _hover={{ bg: '#657BB2' }}>
-                Get in touch!
-              </Button>
-            </a>
-           
-        </Stack>
-        <Flex
-          order={1}
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}          
-          pb={{base: 12, md: 0 }}>
-          <Box
+          <Stack
+            direction={'column'}
+            spacing={3}
+            align={'center'}
+            alignSelf={'center'}
             position={'relative'}
-            height={'200px'}
-            width={'200px'}
-            rounded={'full'}
-            boxShadow={'md'}
-            overflow={'hidden'}>
-            <Image layout='fill' objectFit src={'/hero.png'} alt="Bello Ololade, Freelance Web desinger" />
-           
-          </Box>
-        </Flex>
-      </Stack>
-    </Container>
+            >
+            <Link rel='nofollow' href="#contact">
+                <Button
+                colorScheme={'purple'}
+                bg={'#8092BF'}
+                rounded={'full'}
+                px={6}
+                _hover={{
+                    bg: '#50679F',
+                }}>
+                Get in touch!
+                </Button>
+            </Link>
+            
+            <Box>
+              <Icon
+                as={Arrow}
+                color={useColorModeValue('gray.800', 'gray.300')}
+                w={71}
+                position={'absolute'}
+                right={-71}
+                top={'10px'}
+              />
+              <Text
+                fontSize={'lg'}
+                fontFamily={'Caveat'}
+                position={'absolute'}
+                right={'-125px'}
+                top={'-15px'}
+                transform={'rotate(10deg)'}>
+                let's do this
+              </Text>
+            </Box>
+          </Stack>
+        </Stack>
+      </Container>
+    </>
   );
 }
-
 
 const Arrow = createIcon({
   displayName: 'Arrow',

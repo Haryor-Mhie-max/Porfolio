@@ -8,7 +8,7 @@ import {items} from './assets/data'
 
 const Projects = () => {
     return(
-        <Container id="projects" maxW={'7xl'}>
+        <Container centerContent id="projects" maxW={'7xl'}>
             <Header>Projects</Header>
         <Stack
             align={'center'}

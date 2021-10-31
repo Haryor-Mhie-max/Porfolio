@@ -5,10 +5,10 @@ import {
     Heading,
     Text,
     Stack,
-    Image,
   } from '@chakra-ui/react';
   import Link from 'next/link'
-  
+  import Image from 'next/image'
+
   export default function ProductSimple({image, id, title, desc, url}) {
     return (
       <Center py={12}>
@@ -26,24 +26,7 @@ import {
             rounded={'lg'}
             mt={-12}
             pos={'relative'}
-            height={'230px'}
-            _after={{
-              transition: 'all .3s ease',
-              content: '""',
-              w: 'full',
-              h: 'full',
-              pos: 'absolute',
-              top: 5,
-              left: 0,
-              backgroundImage: `url(${image})`,
-              filter: 'blur(400px)',
-              zIndex: -1,
-            }}
-            _groupHover={{
-              _after: {
-                filter: 'blur(20px)',
-              },
-            }}>
+            height={'230px'}>
             <Image
               rounded={'lg'}
               height={230}
