@@ -66,19 +66,19 @@ export default function Hero() {
               <Icon
                 as={Arrow}
                 color={useColorModeValue('gray.800', 'gray.300')}
-                w={71}
+                w={60}
                 position={'absolute'}
-                right={-71}
+                right={-141}
                 top={'10px'}
               />
               <Text
                 fontSize={'lg'}
                 fontFamily={'Caveat'}
                 position={'absolute'}
-                right={'-125px'}
-                top={'-15px'}
+                right={'-105px'}
+                top={'-13px'}
                 transform={'rotate(10deg)'}>
-                let's do this
+                let's do this!
               </Text>
             </Box>
           </Stack>

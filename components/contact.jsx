@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import {
   Container,
   Flex,
@@ -5,7 +7,6 @@ import {
   Text,
   Button,
   VStack,
-  HStack,
   useColorModeValue,
   Wrap,
   WrapItem,
@@ -15,19 +16,28 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
-  Link,
 } from '@chakra-ui/react';
 import {
-  MdPhone,
-  MdLocationOn,
-  MdEmail,
   MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { BsPerson } from 'react-icons/bs';
 import Header from './SectionHeader'
 import Image from 'next/image'
 
 export default function contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2ewkstt', 'contact_form', form.current, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <Container py={{ sm: 4, md: 5}} id="contact" bg={useColorModeValue('gray.100', 'gray.800')}  maxW="full" mt={0} centerContent overflow="hidden">
       <Header alignItems="center">Contact me</Header>
@@ -80,9 +90,10 @@ export default function contact() {
                   </Box> */}
                 </Box>
               </WrapItem>
-              <WrapItem px={{ base: 16, md: 24 }}  align={'center'}>
+              <WrapItem px={{ base: 4, md: 24 }}  align={'center'}>
                 <Box align={'center'} bg={useColorModeValue('gray.50', 'gray.700')} borderRadius="lg">
                   <Box m={8} >
+                    <form ref={form} onClick={sendEmail}>
                     <VStack spacing={5}>
                       <FormControl id="name">
                         <FormLabel>Your Name</FormLabel>
@@ -126,6 +137,7 @@ export default function contact() {
                         </Button>
                       </FormControl>
                     </VStack>
+                    </form>
                   </Box>
                 </Box>
               </WrapItem>

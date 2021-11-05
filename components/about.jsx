@@ -39,13 +39,14 @@ const about = () => {
                 height={'200px'}
                 width={'200px'}
                 rounded={'full'}
+                border={'4px solid white'}
                 bg="#8092BF"
                 boxShadow={'md'}
                 overflow={'hidden'}>
                 <Image alt='Bello ololade' height='200px' width='200px' objectFit src={'/hero.png'} alt="Bello Ololade, Freelance Web desinger" />
               </Box>
             </Flex>
-        <Stack px={4} order={{base:2, md: 1}} flex={1} spacing={{ base: 8, md: 12 }} position={'relative'}>
+        <Stack px={{base: 0, md: 4}} order={{base:2, md: 1}} flex={1} spacing={{ base: 8, md: 12 }} position={'relative'}>
           
           <Text>
           I am Bello Ololade, A web designer from Nigeria. I got into tech while i was student at olabisi onabanjo university, Bsc Zoology. I've always been fascinated with how things work. fast forward to 2 years later and i'm now designing landing pages for business around the world. 
