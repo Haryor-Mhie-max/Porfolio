@@ -10,6 +10,7 @@ import {
   import Image from 'next/image'
 
   export default function ProductSimple({image, id, title, desc, url}) {
+  
     return (
       <Center py={12}>
         <Box
@@ -26,7 +27,24 @@ import {
             rounded={'lg'}
             mt={-12}
             pos={'relative'}
-            height={'230px'}>
+            height={'230px'}
+            _after={{
+              transition: 'all .3s ease',
+              content: '""',
+              w: 'full',
+              h: '85%',
+              pos: 'absolute',
+              top: 5,
+              left: 0,
+              backgroundImage: `url(${image})`,
+              filter: 'blur(5px)',
+              zIndex: -1,
+            }}
+            _groupHover={{
+              _after: {
+                filter: 'blur(20px)',
+              },
+            }}>
             <Image
               alt={title}
               rounded={'lg'}
