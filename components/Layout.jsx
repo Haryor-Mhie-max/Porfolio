@@ -26,7 +26,7 @@ const Layout = ({children}) => {
 
     <title>Bello Ololade - Freelace Web Designer</title>
   </Head>
-    <Box color={useColorModeValue('gray.600', 'gray.300')} bg={useColorModeValue('gray.50', 'gray.900')} pos={"relative"} w="full" minH="100vh" p={0}>
+    <Box color={useColorModeValue('gray.600', 'gray.300')} bg={useColorModeValue('gray.50', 'gray.900')} pos={"relative"} w="full" minH="100vh" p={0} overflow={'hidden'}>
       <Navbar/>
       <Sidebar />
         {children}  
